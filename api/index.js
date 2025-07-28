@@ -5,6 +5,10 @@ const port  =process.env.PORT
 const { router } = require("../routes/routes")
 const cors = require('cors')
 app.use(cors())
+
+app.get("/", (req, res) => {
+  res.send("Hello from Task Manager Backend!");
+});
 app.use("/api/tasks", router)
 
 const connectDB = require("../connect/connect")
