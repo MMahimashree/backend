@@ -7,7 +7,7 @@ const cors = require('cors')
 app.use(cors())
 
 
-app.use("/api/tasks", router)
+app.use('/', router)
 
 const connectDB = require("../connect/connect")
 
