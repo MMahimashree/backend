@@ -11,15 +11,11 @@ app.use("/api/tasks", router)
 
 const connectDB = require("../connect/connect")
 
-
-
-
-
 const start = async() => {
   try {
     await connectDB(process.env.MONGO_URI)
     app.listen(port, () => {
-      console.log("working")
+      console.log(`listning at port ${port}`)
     })
   }catch(error){
     console.log(error)
